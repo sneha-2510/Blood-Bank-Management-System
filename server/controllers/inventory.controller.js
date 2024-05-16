@@ -2,6 +2,7 @@ const { default: mongoose } = require("mongoose");
 const inventoryModel = require("../models/inventory.model.js")
 const userModel = require("../models/user.model.js")
 
+//add inventory
 const handleCreateInventory = async (req, res) => {
     try {
         const { email } = req.body;
@@ -72,7 +73,7 @@ const handleCreateInventory = async (req, res) => {
         await inventory.save();
         return res.status(201).send({
             success: true,
-            message: "New Blood Reocrd Added",
+            message: "New Blood Record Added",
         });
 
     }

@@ -2,6 +2,8 @@ import {Routes,Route} from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
+import PublicRoute from "./components/Routes/PublicRoute";
+import ProtectedRoute from "./components/Routes/ProtectedRoute";
 function App() {
   return (
     <div>
@@ -91,25 +93,25 @@ function App() {
         <Route
           path="/"
           element={
-            // <ProtectedRoute>
+            <ProtectedRoute>
               <HomePage />
-            /* </ProtectedRoute> */
+            </ProtectedRoute> 
           }
         />
         <Route
           path="/login"
           element={
-            // <PublicRoute>
+            <PublicRoute>
               <Login />
-            /* </PublicRoute> */
+            </PublicRoute> 
           }
         />
         <Route
           path="/register"
           element={
-            // <PublicRoute>
+            <PublicRoute>
               <Register />
-            // </PublicRoute>
+            </PublicRoute>
           }
         />
       </Routes>

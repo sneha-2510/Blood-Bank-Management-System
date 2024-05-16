@@ -1,15 +1,18 @@
 import React from 'react'
 import Form from '../../components/shared/Form/Form';
+import { useSelector } from 'react-redux';
+import Spinner from '../../components/shared/Spinner';
+import toast from 'react-hot-toast';
 
 
 const Login = () => {
-    // const { loading, error } = useSelector((state) => state.auth);
+    const { loading, error } = useSelector((state) => state.auth);
   return (
     <>
-      {/* {error && <span>{alert(error)}</span>}
+       {error && <span>{toast.error(error)}</span>}
       {loading ? (
-        // <Spinner />
-      ) : ( */}
+        <Spinner />
+      ) : ( 
         <div className="row g-0">
           <div className="col-md-6 form-banner">
             
@@ -27,7 +30,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-      {/* )} */}
+       )} 
     </>
   )
 }

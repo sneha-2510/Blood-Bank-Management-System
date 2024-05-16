@@ -1,5 +1,5 @@
-// import { userLogin, userRegister } from "../redux/features/auth/authActions";
-// import store from "../redux/store";
+import { userLogin, userRegister } from "../redux/features/auth/authActions";
+import store from "../redux/store";
 import toast from 'react-hot-toast';
 
 export const handleLogin = (e, email, password, role) => {
@@ -9,7 +9,7 @@ export const handleLogin = (e, email, password, role) => {
      ;
       return toast.error("Please Provide All Fields")
     }
-    // store.dispatch(userLogin({ email, password, role }));
+    store.dispatch(userLogin({ email, password, role }));
   } catch (error) {
     console.log(error);
   }
@@ -29,19 +29,19 @@ export const handleRegister = (
 ) => {
   e.preventDefault();
   try {
-    // store.dispatch(
-    //   userRegister({
-    //     name,
-    //     role,
-    //     email,
-    //     password,
-    //     phone,
-    //     organisationName,
-    //     address,
-    //     hospitalName,
-    //     website,
-    //   })
-    // );
+    store.dispatch(
+      userRegister({
+        name,
+        role,
+        email,
+        password,
+        phone,
+        organisationName,
+        address,
+        hospitalName,
+        website,
+      })
+    );
   } catch (error) {
     console.log(error);
   }

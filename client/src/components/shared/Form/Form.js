@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import InputType from './InputType';
 import { Link } from 'react-router-dom';
 import { handleLogin, handleRegister } from '../../../services/authService';
-import { Toaster } from 'react-hot-toast';
+
 
 const Form = ({ formType, submitBtn, formTitle }) => {
   const [email, setEmail] = useState("");
@@ -215,7 +215,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
           <button className="btn btn-primary" type="submit">
             {submitBtn}
           </button>
-          <Toaster />
+          
         
       </form>
     </div>

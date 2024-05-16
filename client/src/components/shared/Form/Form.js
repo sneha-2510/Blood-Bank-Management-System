@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import InputType from './InputType';
 import { Link } from 'react-router-dom';
+import { handleLogin, handleRegister } from '../../../services/authService';
+import { Toaster } from 'react-hot-toast';
 
 const Form = ({ formType, submitBtn, formTitle }) => {
   const [email, setEmail] = useState("");
@@ -16,21 +18,21 @@ const Form = ({ formType, submitBtn, formTitle }) => {
     <div>
       <form
         onSubmit={(e) => {
-        //   if (formType === "login")
-            // return handleLogin(e, email, password, role);
-        //   else if (formType === "register")
-            // return handleRegister(
-            //   e,
-            //   name,
-            //   role,
-            //   email,
-            //   password,
-            //   phone,
-            //   organisationName,
-            //   address,
-            //   hospitalName,
-            //   website
-            // );
+          if (formType === "login")
+            return handleLogin(e, email, password, role);
+          else if (formType === "register")
+            return handleRegister(
+              e,
+              name,
+              role,
+              email,
+              password,
+              phone,
+              organisationName,
+              address,
+              hospitalName,
+              website
+            );
         }}
       >
         <h1 className="text-center">{formTitle}</h1>
@@ -204,15 +206,16 @@ const Form = ({ formType, submitBtn, formTitle }) => {
             </p>
           ) : (
             <p>
-              ALready Usser Please
+              Already Usser Please
               <Link to="/login"> Login !</Link>
             </p>
           )}
           </div>
           
-          <button className="btn btn-danger" type="submit">
+          <button className="btn btn-primary" type="submit">
             {submitBtn}
           </button>
+          <Toaster />
         
       </form>
     </div>

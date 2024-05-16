@@ -9,16 +9,20 @@ const Register = () => {
         <Spinner />
       ) : ( */}
         <div className="row g-0">
-          <div className="col-md-8 form-banner ">
+          <div className="col-md-6 form-banner ">
             <p>image</p>
             {/* <img src="./assets/images/banner2.jpg" alt="registerImage" /> */}
           </div>
-          <div className="col-md-4 form-container">
+          <div className="col form-container" style={{display:"flex",justifyContent:'center',alignItems:"center"}}>
+            <div className='card shadow'>
+              <div className='card-body'>
             <Form
               formTitle={"Register"}
               submitBtn={"Register"}
               formType={"register"}
             />
+            </div>
+            </div>
           </div>
         </div>
       {/* )} */}

@@ -1,13 +1,17 @@
 import React from 'react'
 import Form from '../../components/shared/Form/Form'
+import Spinner from '../../components/shared/Spinner'
+import toast from 'react-hot-toast'
+import { useSelector } from 'react-redux'
 
 const Register = () => {
+   const { loading, error } = useSelector((state) => state.auth);
   return (
       <>
-      {/* {error && <span>{alert(error)}</span>}
+       {error && <span>{toast.error(error)}</span>}
       {loading ? (
         <Spinner />
-      ) : ( */}
+      ) : ( 
         <div className="row g-0">
           <div className="col-md-6 form-banner ">
             <p>image</p>
@@ -25,9 +29,9 @@ const Register = () => {
             </div>
           </div>
         </div>
-      {/* )} */}
+      )} 
     </>
   )
 }
 
-export default Register
+export default Register;

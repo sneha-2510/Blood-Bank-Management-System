@@ -6,7 +6,7 @@ const connectDB = require('./config/connect');
 dotenv.config();
 
 //mongodb connection
-// connectDB();
+connectDB();
 
 const app = express();
 

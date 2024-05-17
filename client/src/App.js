@@ -4,12 +4,22 @@ import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import PublicRoute from "./components/Routes/PublicRoute";
 import ProtectedRoute from "./components/Routes/ProtectedRoute";
+import DonarList from "./pages/Admin/DonarList";
+import HospitalList from "./pages/Admin/HospitalList";
+import AdminHome from "./pages/Admin/AdminHome";
+import OrgList from "./pages/Admin/OrgList";
+import Analytics from "./pages/Dashboard/Analytics";
+import Consumer from "./pages/Dashboard/Consumer";
+import OrganisationPage from "./pages/Dashboard/OrganisationPage";
+import Donar from "./pages/Dashboard/Donar";
+import Hospitals from "./pages/Dashboard/Hospitals";
+import Donation from "./pages/Donation";
 function App() {
   return (
     <div>
       
        <Routes>
-        {/* <Route
+         <Route
           path="/admin"
           element={
             <ProtectedRoute>
@@ -89,7 +99,7 @@ function App() {
               <Donar />
             </ProtectedRoute>
           }
-        /> */}
+        /> 
         <Route
           path="/"
           element={

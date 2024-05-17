@@ -15,13 +15,19 @@ const Header = () => {
   };
 
   return (
-    <>
-      <nav className="navbar">
-        <div className="container-fluid ">
-          <div className="navbar-brand h1 ">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid">
+        <div className="navbar-brand h1 ">
+          <Link to="/" className="nav-link">
             <BiDonateBlood color="red" /> Blood Bank App
-          </div>
-          <ul className="navbar-nav flex-row">
+          </Link>
+
+        </div>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item mx-3">
               <p className="nav-link">
                 <BiUserCircle /> Welcome{" "}
@@ -30,30 +36,35 @@ const Header = () => {
                 <span className="badge bg-secondary">{user?.role}</span>
               </p>
             </li>
+
             {location.pathname === "/" ||
-            location.pathname === "/donar" ||
-            location.pathname === "/hospital" ? (
-              <li className="nav-item mx-3">
+              location.pathname === "/donar" ||
+              location.pathname === "/hospital" ? (
+
+              <li className="nav-item">
                 <Link to="/analytics" className="nav-link">
                   Analytics
                 </Link>
               </li>
             ) : (
-              <li className="nav-item mx-3">
+              <li className="nav-item">
                 <Link to="/" className="nav-link">
                   Home
                 </Link>
               </li>
             )}
-            <li className="nav-item mx-3">
-              <button className="btn btn-danger" onClick={handleLogout}>
-                Logout
-              </button>
-            </li>
           </ul>
+          <form className="d-flex" role="search">
+            <button
+              className="btn btn-danger"
+              type="submit"
+              onClick={handleLogout}>
+              Logout</button>
+          </form>
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
+
   );
 };
 

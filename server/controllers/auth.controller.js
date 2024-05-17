@@ -30,7 +30,7 @@ const handleRegister = async (req, res) => {
         console.log(error);
         res.status(500).send({
             success: false,
-            message: "error in register API",
+            message: "Please provide all details",
             error
         })
     }

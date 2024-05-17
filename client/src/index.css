@@ -18,10 +18,11 @@
   justify-content: center;
   min-height: 100vh;
 }
-.shadow{
-box-shadow:  0 3px 10px rgb(0, 0, 0, 0.2) !important;
-  
-  
+
+.shadow {
+  box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2) !important;
+
+
 }
 
 /* loader */
@@ -60,12 +61,14 @@ box-shadow:  0 3px 10px rgb(0, 0, 0, 0.2) !important;
 =================== */
 
 .navbar {
-  background-color: black !important;
+  background-color: rgb(240, 52, 52) !important;
   color: white !important;
 }
 
 .nav-link,
 .navbar-brand {
-  background-color: black !important;
+  background-color: rgb(240, 52, 52) !important;
   color: white !important;
+  font-weight: bold;
+
 }

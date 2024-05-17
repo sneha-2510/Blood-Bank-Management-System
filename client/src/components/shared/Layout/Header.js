@@ -19,7 +19,7 @@ const Header = () => {
       <div className="container-fluid">
         <div className="navbar-brand h1 ">
           <Link to="/" className="nav-link">
-            <BiDonateBlood color="red" /> Blood Bank App
+            <BiDonateBlood /> Blood Bank App
           </Link>
 
         </div>
@@ -28,14 +28,7 @@ const Header = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item mx-3">
-              <div className="nav-link">
-                <BiUserCircle /> Welcome{" "}
-                {user?.name || user?.hospitalName || user?.organisationName}
-                &nbsp;
-                <span className="badge bg-secondary">{user?.role}</span>
-              </div>
-            </li>
+
 
             {location.pathname === "/" ||
               location.pathname === "/donar" ||
@@ -53,10 +46,18 @@ const Header = () => {
                 </Link>
               </li>
             )}
+            <li className="nav-item mx-3">
+              <div className="nav-link">
+                <BiUserCircle /> Welcome{" "}
+                {user?.name || user?.hospitalName || user?.organisationName}
+                &nbsp;
+                <span className="badge text-bg-light">{user?.role}</span>
+              </div>
+            </li>
           </ul>
           <form className="d-flex" role="search">
             <button
-              className="btn btn-danger"
+              className="btn btn-outline-light btn-sm"
               type="submit"
               onClick={handleLogout}>
               Logout</button>

@@ -168,7 +168,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                 
+
                   <InputType
                     labelText={"Address"}
                     labelFor={"forAddress"}
@@ -194,7 +194,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
         <div className="d-flex flex-row justify-content-between">
           {formType === "login" ? (
             <p>
-              Not registered yet? 
+              Not registered yet?
               <Link to="/register"> Register Here..</Link>
             </p>
           ) : (
@@ -203,13 +203,13 @@ const Form = ({ formType, submitBtn, formTitle }) => {
               <Link to="/login"> Login !</Link>
             </p>
           )}
-          </div>
-          
-          <button className="btn btn-primary" type="submit">
-            {submitBtn}
-          </button>
-          
-        
+        </div>
+
+        <button className="btn btn-primary" type="submit">
+          {submitBtn}
+        </button>
+
+
       </form>
     </div>
   )

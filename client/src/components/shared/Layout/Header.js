@@ -15,18 +15,15 @@ const Header = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <div className="navbar-brand h1 ">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary"  style={{display:"flex",justifyContent:"space-between",flexDirection:"row"}}>
+     
+        <div className="navbar-brand h1 " style={{marginLeft:"2rem"}}>
           <Link to="/" className="nav-link">
             <BiDonateBlood /> Blood Bank App
           </Link>
-
         </div>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <div  style={{display:"flex",flexDirection:"row", marginRight:"2rem",marginLeft:"2rem"}}>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
 
@@ -63,7 +60,7 @@ const Header = () => {
               Logout</button>
           </form>
         </div>
-      </div>
+     
     </nav>
 
   );

@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import InputType from './InputType';
-import { Link } from 'react-router-dom';
-import { handleLogin, handleRegister } from '../../../services/authService';
-
+import React, { useState } from "react";
+import InputType from "./InputType";
+import { Link } from "react-router-dom";
+import { handleLogin, handleRegister } from "../../../services/authService";
 
 const Form = ({ formType, submitBtn, formTitle }) => {
   const [email, setEmail] = useState("");
@@ -168,7 +167,14 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-
+                  <InputType
+                    labelText={"website"}
+                    labelFor={"forWebsite"}
+                    inputType={"text"}
+                    name={"website"}
+                    value={website}
+                    onChange={(e) => setWebsite(e.target.value)}
+                  />
                   <InputType
                     labelText={"Address"}
                     labelFor={"forAddress"}
@@ -194,25 +200,25 @@ const Form = ({ formType, submitBtn, formTitle }) => {
         <div className="d-flex flex-row justify-content-between">
           {formType === "login" ? (
             <p>
-              Not registered yet?
-              <Link to="/register"> Register Here..</Link>
+              Don't have an account?{" "}
+              <Link to="/register"> Register here</Link>
             </p>
           ) : (
             <p>
-              Already Usser Please
-              <Link to="/login"> Login !</Link>
+              Already have an account?{" "}
+              <Link to="/login"> Login </Link>
             </p>
           )}
+          <button className="btn btn-primary" style={{
+            // display: "block",
+            // width: "100%"
+          }} type="submit">
+            {submitBtn}
+          </button>
         </div>
-
-        <button className="btn btn-primary" type="submit">
-          {submitBtn}
-        </button>
-
-
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

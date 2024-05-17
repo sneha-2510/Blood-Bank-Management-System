@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../components/shared/Spinner";
 import Layout from "../components/shared/Layout/Layout";
-// import Modal from "../components/shared/modal/Modal";
+import Modal from "../components/shared/modal/Modal";
 import API from "../services/API";
-// import moment from "moment";
+import moment from "moment";
 
 const HomePage = () => {
   const { loading, error, user } = useSelector((state) => state.auth);
@@ -43,7 +43,7 @@ const HomePage = () => {
               data-bs-target="#staticBackdrop"
               style={{ cursor: "pointer" }}
             >
-              <i className="fa-solid fa-plus text-success py-4"></i>
+              <i className="fa-solid fa-plus text-success py-4"></i>{" "}
               Add Inventory
             </h4>
             <table className="table ">
@@ -64,14 +64,14 @@ const HomePage = () => {
                     <td>{record.quantity} (ML)</td>
                     <td>{record.email}</td>
                     <td>
-                      {/* {moment(record.createdAt).format("DD/MM/YYYY hh:mm A")} */}
+                      {moment(record.createdAt).format("DD/MM/YYYY hh:mm A")}
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
 
-            {/* <Modal /> */}
+            <Modal />
           </div>
         </>
       )}

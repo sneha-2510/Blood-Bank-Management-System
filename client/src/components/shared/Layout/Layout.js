@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="header">
+      <div className="header sticky-top">
         <Header />
       </div>
       <div className="row g-0">

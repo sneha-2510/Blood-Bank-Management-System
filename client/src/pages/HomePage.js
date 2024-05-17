@@ -46,7 +46,7 @@ const HomePage = () => {
               <i className="fa-solid fa-plus text-success py-4"></i>{" "}
               Add Inventory
             </h4>
-            <table className="table table-dark table-striped ">
+            <table className="table table-light table-striped table-bordered">
               <thead>
                 <tr>
                   <th scope="col">Blood Group</th>

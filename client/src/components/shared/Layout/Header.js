@@ -3,6 +3,7 @@ import { BiDonateBlood, BiUserCircle } from "react-icons/bi";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import toast from "react-hot-toast";
+import { FaUserCircle } from "react-icons/fa";
 const Header = () => {
   const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary"  style={{display:"flex",justifyContent:"space-between",flexDirection:"row"}}>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary "  style={{display:"flex",justifyContent:"space-between",flexDirection:"row",}}>
      
         <div className="navbar-brand h1 " style={{marginLeft:"2rem"}}>
           <Link to="/" className="nav-link">
@@ -45,7 +46,7 @@ const Header = () => {
             )}
             <li className="nav-item mx-3">
               <div className="nav-link">
-                <BiUserCircle /> Welcome{" "}
+                <FaUserCircle /> Welcome{" "}
                 {user?.name || user?.hospitalName || user?.organisationName}
                 &nbsp;
                 <span className="badge text-bg-light">{user?.role}</span>

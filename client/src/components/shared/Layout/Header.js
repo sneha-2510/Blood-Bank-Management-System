@@ -29,12 +29,12 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item mx-3">
-              <p className="nav-link">
+              <div className="nav-link">
                 <BiUserCircle /> Welcome{" "}
                 {user?.name || user?.hospitalName || user?.organisationName}
                 &nbsp;
                 <span className="badge bg-secondary">{user?.role}</span>
-              </p>
+              </div>
             </li>
 
             {location.pathname === "/" ||

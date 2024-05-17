@@ -52,7 +52,7 @@ export const userRegister = createAsyncThunk(
         organisationName,
         address,
         hospitalName,
-        website,
+        // website,
       });
       if (data?.success) {
 

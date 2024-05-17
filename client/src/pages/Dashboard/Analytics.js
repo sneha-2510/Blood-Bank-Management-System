@@ -52,8 +52,10 @@ const Analytics = () => {
   }, []);
   return (
     <>
-      <Header />
-      <div className="d-flex flex-row flex-wrap">
+    <div className="header sticky-top">
+      <Header  />
+      </div>
+      <div className="d-flex flex-row flex-wrap justify-content-evenly">
         {data?.map((record, i) => (
           <div
             className="card m-2 p-1"
@@ -77,9 +79,10 @@ const Analytics = () => {
           </div>
         ))}
       </div>
+      <br/>
       <div className="container my-3">
         <h1 className="my-3">Recent Blood Transactions</h1>
-        <table className="table ">
+        <table className="table table-light table-striped table-bordered ">
           <thead>
             <tr>
               <th scope="col">Blood Group</th>

@@ -52,8 +52,8 @@ const Analytics = () => {
   }, []);
   return (
     <>
-    <div className="header sticky-top">
-      <Header  />
+      <div className="header sticky-top">
+        <Header />
       </div>
       <div className="d-flex flex-row flex-wrap justify-content-evenly">
         {data?.map((record, i) => (
@@ -79,7 +79,7 @@ const Analytics = () => {
           </div>
         ))}
       </div>
-      <br/>
+      <br />
       <div className="container my-3">
         <h1 className="my-3">Recent Blood Transactions</h1>
         <table className="table table-light table-striped table-bordered ">

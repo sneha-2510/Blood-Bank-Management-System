@@ -30,7 +30,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
               organisationName,
               address,
               hospitalName,
-              website
+              // website
             );
         }}
       >
@@ -167,14 +167,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <InputType
-                    labelText={"website"}
-                    labelFor={"forWebsite"}
-                    inputType={"text"}
-                    name={"website"}
-                    value={website}
-                    onChange={(e) => setWebsite(e.target.value)}
-                  />
+
                   <InputType
                     labelText={"Address"}
                     labelFor={"forAddress"}
@@ -209,13 +202,11 @@ const Form = ({ formType, submitBtn, formTitle }) => {
               <Link to="/login"> Login </Link>
             </p>
           )}
-          <button className="btn btn-primary" style={{
-            // display: "block",
-            // width: "100%"
-          }} type="submit">
-            {submitBtn}
-          </button>
+
         </div>
+        <button className="btn btn-primary" type="submit">
+          {submitBtn}
+        </button>
       </form>
     </div>
   );
